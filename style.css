@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.bod1{
+    background-color: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#container{
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    gap: 10px;
+    align-items: flex-start;
+}
+#mainvideo{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: cornsilk;
+    padding: 4px;
+    margin-top: 20px;
+    margin-left: 4px;
+    box-shadow: 2px 2px 8px 2px black;
+}
+#container #mainvideo video{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#container #mainvideo video .title{
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#container .video-list{
+    background-color: aliceblue;
+    height: 520px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+#container .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+#container .video-list::-webkit-scrollbar-track{
+    background-color: coral;
+    border-radius: 50px;
+}
+#container .video-list::-webkit-scrollbar-thumb{
+    background-color: crimson;
+}
+#container .video-list .vid video{
+    width: 100px;
+}
+#container .video-list .vid {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#container .video-list .vid.active{
+    background-color: rgba(0, 0, 255, 0.461);
+    color: wheat;
+}
+footer{
+    background-color: black;
+    color: wheat;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+@media (max-width: 991px) {
+    #container{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .bod1{
+        display: block;
+        height: auto;
+    }
+    #container{
+        grid-template-columns:  1fr;
+    }
+    .vid .title{
+        font-size: 10px;
+    }
+}
